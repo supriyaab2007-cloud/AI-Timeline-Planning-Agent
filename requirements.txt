@@ -1,0 +1,9 @@
+Flask
+flask-cors
+python-dotenv
+crewai
+pymongo
+openai
+requests
+google-search-results
+serpapi-search-tools

@@ -1,0 +1,100 @@
+{
+    "tasks": [
+        {
+            "name": "Requirement Gathering",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Collect and document functional and non-functional requirements from stakeholders.",
+            "depends_on": []
+        },
+        {
+            "name": "System Design",
+            "duration_days": 2,
+            "priority": "Medium",
+            "description": "Define architecture, tech stack, and high-level component interactions.",
+            "depends_on": [
+                "Requirement Gathering"
+            ]
+        },
+        {
+            "name": "Database Schema Design",
+            "duration_days": 1,
+            "priority": "Medium",
+            "description": "Create ER diagram and define tables, relationships, and indexes.",
+            "depends_on": [
+                "System Design"
+            ]
+        },
+        {
+            "name": "API Design",
+            "duration_days": 1,
+            "priority": "Medium",
+            "description": "Document RESTful endpoints, request/response models, and authentication flow.",
+            "depends_on": [
+                "System Design"
+            ]
+        },
+        {
+            "name": "Backend Development",
+            "duration_days": 4,
+            "priority": "High",
+            "description": "Implement core business logic, data persistence, and authentication.",
+            "depends_on": [
+                "API Design",
+                "Database Schema Design"
+            ]
+        },
+        {
+            "name": "Frontend Development",
+            "duration_days": 4,
+            "priority": "High",
+            "description": "Build user interfaces for customers, restaurants, and admins.",
+            "depends_on": [
+                "API Design"
+            ]
+        },
+        {
+            "name": "Payment Gateway Integration",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Integrate payment processing and handle transaction callbacks.",
+            "depends_on": [
+                "Backend Development",
+                "Frontend Development"
+            ]
+        },
+        {
+            "name": "Testing (Unit & Integration)",
+            "duration_days": 3,
+            "priority": "High",
+            "description": "Write and run tests to validate functionality and data flows.",
+            "depends_on": [
+                "Backend Development",
+                "Frontend Development",
+                "Payment Gateway Integration"
+            ]
+        },
+        {
+            "name": "Deployment & Configuration",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Configure servers, CI/CD pipelines, and deploy to staging/production.",
+            "depends_on": [
+                "Testing"
+            ]
+        },
+        {
+            "name": "Documentation & Handover",
+            "duration_days": 1,
+            "priority": "Medium",
+            "description": "Prepare system documentation, user guides, and complete handover.",
+            "depends_on": [
+                "Deployment & Configuration"
+            ]
+        }
+    ],
+    "project_name": "Online Food Delivery System",
+    "deadline_days": 20,
+    "hours_per_day": 5.0,
+    "completed_tasks": "none"
+}

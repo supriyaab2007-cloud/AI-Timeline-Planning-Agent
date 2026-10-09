@@ -1,0 +1,81 @@
+{
+    "tasks": [
+        {
+            "name": "Project Planning & Specification",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Define scope, objectives, success criteria, and major milestones for the attendance system.",
+            "depends_on": []
+        },
+        {
+            "name": "Database Schema Design",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Design tables for students, classes, attendance records, and device logs.",
+            "depends_on": ["Project Planning & Specification"]
+        },
+        {
+            "name": "AI Model Selection & Feasibility Study",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Research suitable image‑recognition models and decide on architecture and libraries.",
+            "depends_on": ["Project Planning & Specification"]
+        },
+        {
+            "name": "Data Collection & Annotation",
+            "duration_days": 3,
+            "priority": "High",
+            "description": "Capture classroom images and annotate faces for training the attendance model.",
+            "depends_on": ["AI Model Selection & Feasibility Study"]
+        },
+        {
+            "name": "Data Preprocessing & Feature Engineering",
+            "duration_days": 2,
+            "priority": "Medium",
+            "description": "Clean images, perform face detection, normalization, and augment data for robustness.",
+            "depends_on": ["Data Collection & Annotation"]
+        },
+        {
+            "name": "Model Training & Evaluation",
+            "duration_days": 3,
+            "priority": "High",
+            "description": "Train the selected model on the prepared dataset and evaluate accuracy.",
+            "depends_on": ["Data Preprocessing & Feature Engineering"]
+        },
+        {
+            "name": "API Development",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Create REST endpoints for image upload, attendance retrieval, and user authentication.",
+            "depends_on": ["Model Training & Evaluation"]
+        },
+        {
+            "name": "Frontend UI Design",
+            "duration_days": 2,
+            "priority": "Medium",
+            "description": "Design intuitive interfaces for students and instructors to view attendance.",
+            "depends_on": ["Project Planning & Specification"]
+        },
+        {
+            "name": "Integration & System Testing",
+            "duration_days": 2,
+            "priority": "High",
+            "description": "Connect frontend, backend, and database; run end‑to‑end tests for functionality.",
+            "depends_on": ["API Development", "Frontend UI Design"]
+        },
+        {
+            "name": "Documentation & Report Writing",
+            "duration_days": 2,
+            "priority": "Low",
+            "description": "Prepare user manual, developer guide, and final project report.",
+            "depends_on": ["Integration & System Testing"]
+        },
+        {
+            "name": "Deployment & Final Review",
+            "duration_days": 1,
+            "priority": "High",
+            "description": "Deploy the application to a hosted environment and perform final quality checks.",
+            "depends_on": ["Documentation & Report Writing"]
+        }
+    ]
+}
